@@ -1,0 +1,63 @@
+{
+    "name": "calabi-contracts",
+    "version": "1.0.0",
+    "license": "MIT",
+    "repository": {
+        "url": "https://github.com/calabifi/contracts"
+    },
+    "scripts": {
+        "hardhat": "hardhat",
+        "build": "yarn run build:cjs",
+        "build:cjs": "tsc -p tsconfig.cjs.json",
+        "c": "yarn compile",
+        "compile": "yarn hardhat compile",
+        "deploy": "yarn deploy:fvm",
+        "deploy:fvm": "yarn compile && yarn hardhat run scripts/deploy.ts --network fvm",
+        "test": "hardhat test test/*.test.ts"
+    },
+    "devDependencies": {
+        "@ethersproject/bignumber": "^5.0.14",
+        "@nomiclabs/ethereumjs-vm": "^4",
+        "@nomiclabs/hardhat-ethers": "^2.0.1",
+        "@nomiclabs/hardhat-etherscan": "^2.1.8",
+        "@nomiclabs/hardhat-waffle": "^2.0.1",
+        "@openzeppelin/contracts": "^4.2.0",
+        "@openzeppelin/contracts-ethereum-package": "^3.0.0",
+        "@openzeppelin/contracts-upgradeable": "^3.4.0",
+        "@openzeppelin/hardhat-upgrades": "^1.9.0",
+        "@openzeppelin/test-helpers": "^0.5.10",
+        "@pancakeswap-libs/pancake-swap-core": "^0.1.0",
+        "@typechain/ethers-v5": "^8.0.2",
+        "@typechain/hardhat": "^3.0.0",
+        "@types/chai": "^4.2.15",
+        "@types/luxon": "^2.0.4",
+        "@types/mocha": "^8.2.0",
+        "@types/node": "^14.14.28",
+        "chai": "^4.3.0",
+        "chai-bn": "^0.2.1",
+        "dotenv": "^8.2.0",
+        "eth-permit": "^0.1.10",
+        "ethereum-waffle": "^3.2.2",
+        "ethereumjs-util": "^7.0.10",
+        "ethers": "^5.0.31",
+        "hardhat": "^2.0.10",
+        "hardhat-deploy": "^0.7.0-beta.45",
+        "luxon": "^2.0.2",
+        "solhint": "^3.3.4",
+        "solhint-plugin-prettier": "^0.0.5",
+        "solidity-coverage": "^0.7.15",
+        "ts-generator": "^0.1.1",
+        "ts-node": "^9.1.1",
+        "typechain": "^6.0.2",
+        "typescript": "^4.1.5",
+        "web3": "^1.5.2"
+    },
+    "files": [
+        "typechain",
+        "artifacts",
+        "contracts"
+    ],
+    "engines": {
+        "node": ">=12"
+    }
+}
